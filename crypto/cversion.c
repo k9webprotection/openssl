@@ -28,17 +28,9 @@ const char *OpenSSL_version(int t)
     case OPENSSL_PLATFORM:
         return PLATFORM;
     case OPENSSL_DIR:
-#ifdef OPENSSLDIR
-        return "OPENSSLDIR: \"" OPENSSLDIR "\"";
-#else
         return "OPENSSLDIR: N/A";
-#endif
     case OPENSSL_ENGINES_DIR:
-#ifdef ENGINESDIR
-        return "ENGINESDIR: \"" ENGINESDIR "\"";
-#else
         return "ENGINESDIR: N/A";
-#endif
     }
     return "not available";
 }
