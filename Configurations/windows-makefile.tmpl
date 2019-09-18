@@ -42,6 +42,7 @@
      (my $lib = shift) =~ s/\.a$//;
      $lib .= '_static'
          if (defined $unified_info{sharednames}->{$lib});
+     $lib .= "-dbg" if ($config{build_type} eq "debug");
      return $lib . $libext;
  }
 
